@@ -17,24 +17,15 @@
   "TUTORIAL_SKIP_BUTTON": "Skip",
   "TUTORIAL_CONTINUE_BUTTON": "Continue",
 
-  "TUTORIAL_SLIDE1_TITLE": "Welcome to the Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "The <b>Ionic Super Starter</b> is a fully-featured Ionic starter with many pre-built pages and best practices.",
+  "TUTORIAL_SLIDE1_TITLE": "Welcome to the Akarsh's Shopping cart",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "The <b>Shopping Cart</b> is a fully-featured with Ionic3 and Angular with many pre-built pages and best practices with in an hour.",
 
-  "TUTORIAL_SLIDE2_TITLE": "How to use the Super Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Assemble the various page types you want and remove the ones you don't. We've provided many common mobile app page layouts, like login and signup pages, tabs, and this tutorial page.",
 
-  "TUTORIAL_SLIDE3_TITLE": "Getting Started",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Need help? Check out the Super Starter README for a full tutorial",
-
-  "TUTORIAL_SLIDE4_TITLE": "Ready to Play?",
-
-  "WELCOME_INTRO": "The starting point for your next great Ionic app",
+  "WELCOME_INTRO": "The starting point for Akarsh's shopping Ionic cart which is in developing stages",
 
   "SETTINGS_TITLE": "Settings",
-  "SETTINGS_OPTION1": "Option 1",
-  "SETTINGS_OPTION2": "Option 2",
-  "SETTINGS_OPTION3": "Option 3",
-  "SETTINGS_OPTION4": "Option 4",
+  "SETTINGS_OPTION1": "IsAdmin",
+  "SETTINGS_OPTION2": "Name",
 
   "SETTINGS_PROFILE_BUTTON": "Edit Profile",
 

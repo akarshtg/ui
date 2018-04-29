@@ -12,6 +12,8 @@ import { Items } from '../../providers';
 export class ListMasterPage {
   currentItems: Item[];
 
+  isAdmin: Boolean = window.localStorage.getItem("isAdmin") === "true";
+
   constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
     this.currentItems = this.items.query();
   }

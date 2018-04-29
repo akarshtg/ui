@@ -34,18 +34,23 @@ export class SettingsPage {
 
   subSettings: any = SettingsPage;
 
+  name: String = window.localStorage.getItem("name");
+
+  isAdmin: Boolean = window.localStorage.getItem("isAdmin") === "true" ? true : false;
+
   constructor(public navCtrl: NavController,
     public settings: Settings,
     public formBuilder: FormBuilder,
     public navParams: NavParams,
     public translate: TranslateService) {
+      // this.options.isAdmin = this.isAdmin;
+      // this.options.name =this.name;
   }
 
   _buildForm() {
     let group: any = {
-      option1: [this.options.option1],
-      option2: [this.options.option2],
-      option3: [this.options.option3]
+      isAdmin: [this.isAdmin],
+      name: [this.name]
     };
 
     switch (this.page) {
@@ -53,7 +58,7 @@ export class SettingsPage {
         break;
       case 'profile':
         group = {
-          option4: [this.options.option4]
+          name: [this.name]
         };
         break;
     }
@@ -87,6 +92,13 @@ export class SettingsPage {
 
       this._buildForm();
     });
+  }
+
+  nameChange(changedValue, isNameValue) {
+    let isName = isNameValue ? "name" : "isAdmin";
+    if(isNameValue)
+      this.name = changedValue;
+    window.localStorage.setItem("name", changedValue);
   }
 
   ngOnChanges() {

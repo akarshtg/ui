@@ -14,7 +14,10 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class WelcomePage {
 
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController) {
+    window.localStorage.removeItem("name");
+    window.localStorage.removeItem("isAdmin");
+  }
 
   login() {
     this.navCtrl.push('LoginPage');

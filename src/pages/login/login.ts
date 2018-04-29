@@ -19,6 +19,7 @@ export class LoginPage {
     password: 'test'
   };
 
+  isAdmin: Boolean = false;
   // Our translated text strings
   private loginErrorString: string;
 
@@ -34,9 +35,19 @@ export class LoginPage {
 
   // Attempt to login in through our User service
   doLogin() {
+    let isAdmin = this.isAdmin;
+    let name = this.account.email.split("@")[0];
     this.user.login(this.account).subscribe((resp) => {
+      console.log(isAdmin)
+      if(isAdmin) {
+        window.localStorage.setItem("isAdmin" , "true");
+      }
       this.navCtrl.push(MainPage);
     }, (err) => {
+      if(isAdmin) {
+        window.localStorage.setItem("isAdmin" , "true");
+      }
+      window.localStorage.setItem("name" , name);
       this.navCtrl.push(MainPage);
       // Unable to log in
       let toast = this.toastCtrl.create({
